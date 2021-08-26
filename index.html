@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>CPWD | Room homepage</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,34 +14,94 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div class="x-icon"></div>
-      <ul>
-        <li>Home</li>
-        <li>Shop</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+    <div class="hamberger-menu">
+      <button><img src="images/icon-hamburger.svg" alt="hamburger icon"></button>
+    </div>
+    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+    <!-- hidden nav -->
+    <div class="hidden-nav">
+      <nav>
+        <div class="x-icon">
+          <button><img src="images/icon-close.svg" alt="close icon"></button>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>      
+    </div>
   </header>
 
+  <main>
   <div class="slideshow-container">
     <div class="slide fade">
       <div class="image-1"></div>
-      <h1 class="header-1"></h1>
-      <p class="description-1"></p>
-      <div class="shop-link">
-        <p class="shop-now"></p>
-        <div class="arrow-icon"></div>
+      <div class="slide-content">
+        <h1 class="header-1"></h1>
+        <p class="description-1"></p>
+        <div class="shop-link">
+          <p class="shop-now"><a href="#">Shop now</a></p>
+          <div class="arrow-icon">
+            <a href="#"><img src="images/icon-arrow.svg" alt="arrow icon"></a>
+          </div>
+        </div>        
       </div>
-    
+    </div>
+    <div class="slide fade">
+      <div class="image-2"></div>
+      <div class="slide-content">
+        <h1 class="header-2"></h1>
+        <p class="description-2"></p>
+        <div class="shop-link">
+          <p class="shop-now"><a href="#">Shop now</a></p>
+          <div class="arrow-icon">
+            <a href="#"><img src="images/icon-arrow.svg" alt="arrow icon"></a>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <div class="slide fade">
+      <div class="image-3"></div>
+      <div class="slide-content">
+        <h1 class="header-3"></h1>
+        <p class="description-3"></p>
+        <div class="shop-link">
+          <p class="shop-now"><a href="#">Shop now</a></p>
+          <div class="arrow-icon">
+            <a href="#"><img src="images/icon-arrow.svg" alt="arrow icon"></a>
+          </div>
+        </div>        
+      </div>
     </div>
 
     <div class="nav-arrows">
-      <div class="left"></div>
-      <div class="right"></div>
+      <div class="left">
+        <button><img src="images/icon-angle-left.svg" alt="left arrow"></button>
+      </div>
+      <div class="right">
+        <button><img src="images/icon-angle-right.svg" alt="right arrow"></button>
+      </div>
     </div>
   </div>
+  <div class="about-dark"></div>
+  <div class="about">
+    <h2>About our furniture</h2>
+    <p>Our multifunctional collection blends design and function to suit your       individual taste.
+      Make each room unique, or pick a cohesive theme that best express your interests and what
+      inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+      or anything in between. Product specialists are available to help you create your dream space.</p>
+  </div>
+  <div class="about-light"></div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
   
   
   
@@ -79,10 +137,5 @@
   Make each room unique, or pick a cohesive theme that best express your interests and what
   inspires you. Find the furniture pieces you need, from traditional to contemporary styles
   or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
