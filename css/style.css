@@ -1,0 +1,287 @@
+:root {
+	--Dark-Gray: hsl(0, 0%, 63%);
+	--Black: hsl(0, 0%, 0%);
+	--White: hsl(0, 0%, 100%);
+	--Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/* position: relative; */
+	font-family: "Spartan", sans-serif;
+	font-size: 12px;
+	/* background: rgb(255, 255, 255); */
+}
+
+.main-wrapper {
+	background: rgb(255, 255, 255);
+	position: relative;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	outline: 0;
+	border: none;
+	background: 0;
+}
+
+h1,
+h2,
+p.shop-now a {
+	color: black;
+}
+
+p {
+	color: var(--Dark-Gray);
+}
+
+/* hamburger header */
+
+header {
+	position: relative;
+}
+
+.mobile-header-wrap {
+	padding: 2.5rem 1rem;
+	display: flex;
+	background-image: url(../images/mobile-image-hero-1.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: top 0 left 0;
+	height: 350px;
+}
+
+.desktop-header-wrap {
+	display: none;
+}
+
+.hamburger-menu {
+	margin-right: 7.2rem;
+}
+
+.logo {
+	position: absolute;
+	left: 41vw;
+	top: 40px;
+}
+
+.hidden-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	height: 100px;
+	display: flex;
+	display: none;
+	z-index: 2;
+}
+
+.black-background {
+	background-color: rgb(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 100%;
+	z-index: 1;
+	display: none;
+}
+
+.x-icon {
+	display: flex;
+	align-items: center;
+}
+
+.hidden-nav nav {
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+}
+
+.hidden-nav ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	gap: 35px;
+}
+
+.hidden-nav a {
+	text-transform: lowercase;
+	font-weight: 700;
+	/* font-size: 13px; */
+}
+
+.nav-arrows.desktop {
+	display: none;
+}
+
+.nav-arrows {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	background-color: black;
+}
+
+.left button,
+.right button {
+	width: 55px;
+	height: 50px;
+}
+
+.nav-arrows img {
+	width: 10px;
+}
+
+/* /hamburger header */
+
+/* slide-content */
+.slide-content {
+	background-color: white;
+	padding: 3.5rem 1.5rem;
+}
+
+h1 {
+	margin-bottom: 15px;
+}
+
+.description {
+	line-height: 18px;
+	margin-bottom: 3rem;
+}
+
+.shop-link {
+	display: flex;
+	gap: 2rem;
+}
+
+.shop-now {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 11px;
+}
+/* /slide-content */
+
+/* about */
+.about {
+	background-color: white;
+	padding: 3rem 1.5rem;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 6px;
+	margin-bottom: 11px;
+}
+
+.about p {
+	line-height: 18px;
+}
+
+/* /about */
+
+/* about-images */
+.about-dark,
+.about-light {
+	width: 100%;
+	height: 238px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.about-dark {
+	background-image: url(../images/image-about-dark.jpg);
+}
+
+.about-light {
+	background-image: url(../images/image-about-light.jpg);
+}
+/* /about-images */
+
+footer {
+	margin: 2rem 0;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+	/* body {
+		display: grid;
+		grid-template-areas:
+			"desktop-header desktop-header slide slide"
+			"about-dark about about about-light"
+			"footer footer footer footer";
+		grid-template-rows: 540px 1fr;
+		/* width 850px */
+	/* grid-template-columns: 396px 1fr 1fr 396px; */
+	/* }  */
+
+	.main-wrapper {
+		display: grid;
+		height: 100vh;
+		grid-template-areas:
+			"desktop-header desktop-header slide slide"
+			"about-dark about about about-light";
+		grid-template-rows: 546px 0fr;
+		grid-template-columns: 397px 5fr 2fr 397px;
+		max-width: 1440px;
+	}
+
+	.nav-arrows.mobile {
+		display: none;
+	}
+
+	.mobile-header-wrap {
+		display: none;
+	}
+
+	.desktop-header-wrap {
+		grid-area: desktop-header;
+		display: block;
+		background-image: url(../images/desktop-image-hero-1.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: top 0 left 0;
+		width: 100%;
+	}
+
+	.slideshow-container {
+		grid-area: slide;
+	}
+
+	.about {
+		grid-area: about;
+		background-color: white;
+		padding: 4rem 3.6rem;
+	}
+
+	.about-dark {
+		grid-area: about-dark;
+	}
+
+	.about-light {
+		grid-area: about-light;
+	}
+
+	footer {
+		grid-area: footer;
+	}
+}
