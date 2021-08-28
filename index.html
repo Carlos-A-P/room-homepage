@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +14,17 @@
 <body>
   <main class="main-wrapper">
     <header>
+      <div class="logo"><img src="images/logo.svg" alt="logo"></div>
       <div class="mobile-header-wrap">
         <div class="hamburger-menu">
-          <button><img src="images/icon-hamburger.svg" alt="hamburger icon"></button>
+          <button onclick=" mobileNav()"><img src="images/icon-hamburger.svg" alt="hamburger icon"></button>
         </div>
-        <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+        
         <!-- hidden nav -->
-        <div class="hidden-nav" >
+        <div class="hidden-nav hidden" id="hidden-nav" >
           <nav>
             <div class="x-icon">
-              <button><img src="images/icon-close.svg" alt="close icon"></button>
+              <button onclick=" mobileNav()"><img src="images/icon-close.svg" alt="close icon"></button>
             </div>
             <ul>
               <li><a href="#">Home</a></li>
@@ -33,28 +35,21 @@
           </nav>      
         </div>    
       </div>
-      <div class="nav-arrows mobile">
-        <div class="left">
-          <button><img src="images/icon-angle-left.svg" alt="left arrow"></button>
-        </div>
-        <div class="right">
-          <button><img src="images/icon-angle-right.svg" alt="right arrow"></button>
-        </div>
-      </div> 
     </header>
-      <div class="desktop-header-wrap">
-        <div class="desktop-nav">
-          <div class="logo"><img src="images/logo.svg" alt="logo"></div>
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>      
-      </div>
+    <div class="desktop-header-wrap">
+      <div class="desktop-nav">
+        <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a><span></span></li>
+            <li><a href="#">Shop</a><span></span></li>
+            <li><a href="#">About</a><span></span></li>
+            <li><a href="#">Contact</a><span></span></li>
+          </ul>
+        </nav>
+      </div>      
+    </div>
+    <div class="slideshow-container">
       <div class="nav-arrows desktop">
         <div class="left">
           <button><img src="images/icon-angle-left.svg" alt="left arrow"></button>
@@ -62,12 +57,7 @@
         <div class="right">
           <button><img src="images/icon-angle-right.svg" alt="right arrow"></button>
         </div>
-      </div>    
-    
-
-
-
-    <div class="slideshow-container">
+      </div> 
       <!-- slide-1 -->
       <div class="slide fade">
         <div class="image-1"></div>
@@ -129,9 +119,10 @@
         inspires you. Find the furniture pieces you need, from traditional to contemporary styles
         or anything in between. Product specialists are available to help you create your dream space.</p>
     </div>
-    <div class="about-light"></div>    
+    <div class="about-light"></div>
+    <div class="black-background hidden fade" id="black-background"></div>    
   </main>
-  <div class="black-background"></div>
+  
 
 
   <footer>
