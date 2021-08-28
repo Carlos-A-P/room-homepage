@@ -13,14 +13,13 @@
 </head>
 <body>
   <main class="main-wrapper">
-    <header>
+    <!-- mobile -->
+    <div class="mobile">
       <div class="logo"><img src="images/logo.svg" alt="logo"></div>
-      <div class="mobile-header-wrap">
+      <div class="mobile-nav">
         <div class="hamburger-menu">
           <button onclick=" mobileNav()"><img src="images/icon-hamburger.svg" alt="hamburger icon"></button>
         </div>
-        
-        <!-- hidden nav -->
         <div class="hidden-nav hidden" id="hidden-nav" >
           <nav>
             <div class="x-icon">
@@ -33,10 +32,14 @@
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>      
-        </div>    
+        </div>         
       </div>
-    </header>
-    <div class="desktop-header-wrap">
+      <div class="mobile-header">
+        <div class="mobile-header-image fade" id="mobile-header">
+      </div>
+      </div>      
+    </div>
+    <div class="desktop-header-wrap fade" id="desktop-header">
       <div class="desktop-nav">
         <div class="logo"><img src="images/logo.svg" alt="logo"></div>
         <nav>
@@ -52,10 +55,10 @@
     <div class="slideshow-container">
       <div class="nav-arrows desktop">
         <div class="left">
-          <button><img src="images/icon-angle-left.svg" alt="left arrow"></button>
+          <button onclick="plusSlides(-1)"><img src="images/icon-angle-left.svg" alt="left arrow"></button>
         </div>
         <div class="right">
-          <button><img src="images/icon-angle-right.svg" alt="right arrow"></button>
+          <button onclick="plusSlides(1)"><img src="images/icon-angle-right.svg" alt="right arrow"></button>
         </div>
       </div> 
       <!-- slide-1 -->
@@ -76,7 +79,7 @@
       </div>
       <!-- /slide-1 -->
       <!-- slide-2 -->
-      <div class="slide fade" style="display: none;">
+      <div class="slide fade">
         <div class="image-2"></div>
         <div class="slide-content">
           <h1 class="header-2">We are available all across the globe</h1>
@@ -93,7 +96,7 @@
       </div>
       <!-- /slide-2 -->
       <!-- slide-3 -->
-      <div class="slide fade" style="display: none;">
+      <div class="slide fade">
         <div class="image-3"></div>
         <div class="slide-content">
           <h1 class="header-3">Manufactured with the best materials</h1>
@@ -111,22 +114,22 @@
       <!-- /slide-3 -->
     </div>
 
-    <div class="about-dark"></div>
-    <div class="about">
+    <div class="about-dark fade"></div>
+    <div class="about fade">
       <h2>About our furniture</h2>
       <p>Our multifunctional collection blends design and function to suit your       individual taste.
         Make each room unique, or pick a cohesive theme that best express your interests and what
         inspires you. Find the furniture pieces you need, from traditional to contemporary styles
         or anything in between. Product specialists are available to help you create your dream space.</p>
     </div>
-    <div class="about-light"></div>
+    <div class="about-light fade"></div>
     <div class="black-background hidden fade" id="black-background"></div>    
   </main>
   
 
 
-  <footer>
-    <div class="attribution">
+  <footer class="">
+    <div class="attribution fade">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Carlos Perez</a>.
     </div>
