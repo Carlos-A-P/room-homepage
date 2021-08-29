@@ -24,8 +24,9 @@ body {
 .main-wrapper {
 	background: rgb(255, 255, 255);
 	position: relative;
-	max-width: 768px;
-	margin: 0 auto;
+	/* max-width: 768px; */
+	/* margin: 0 auto; */
+	overflow: hidden;
 }
 
 a {
@@ -34,7 +35,6 @@ a {
 }
 
 button {
-	outline: 0;
 	border: none;
 	background: 0;
 }
@@ -147,6 +147,17 @@ header {
 	display: none;
 }
 
+.visible {
+	visibility: visible;
+	transition: opacity 1.5s linear;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
 @-webkit-keyframes fade {
 	from {
 		opacity: 0;
@@ -154,6 +165,13 @@ header {
 	to {
 		opacity: 1;
 	}
+	/* 0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	} */
 }
 
 @keyframes fade {
@@ -163,6 +181,13 @@ header {
 	to {
 		opacity: 1;
 	}
+	/* 0%,
+	100% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	} */
 }
 
 .fade {
@@ -295,7 +320,7 @@ footer {
 	margin: 2rem 0;
 	padding: 2rem;
 	background: white;
-	max-width: 500px;
+	/* max-width: 500px; */
 	margin: auto;
 }
 
@@ -328,10 +353,6 @@ footer {
 	.about {
 		background-color: white;
 		padding: 10% 5%;
-	}
-
-	footer {
-		max-width: 768px;
 	}
 }
 

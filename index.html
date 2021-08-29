@@ -15,15 +15,15 @@
   <main class="main-wrapper">
     <!-- mobile -->
     <div class="mobile">
-      <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+      <div class="logo"><img src="images/logo.svg" alt="room"></div>
       <div class="mobile-nav">
         <div class="hamburger-menu">
-          <button onclick=" mobileNav()"><img src="images/icon-hamburger.svg" alt="hamburger icon"></button>
+          <button onclick=" mobileNav()" aria-label="hamburger dropdown toggle"><img src="images/icon-hamburger.svg" aria-expanded="false" alt=""></button>
         </div>
         <div class="hidden-nav hidden" id="hidden-nav" >
           <nav>
             <div class="x-icon">
-              <button onclick=" mobileNav()"><img src="images/icon-close.svg" alt="close icon"></button>
+              <button onclick=" mobileNav()" aria-expanded="true" aria-label="close hamburger dropdown"><img src="images/icon-close.svg" alt=""></button>
             </div>
             <ul>
               <li><a href="#">Home</a></li>
@@ -35,13 +35,13 @@
         </div>         
       </div>
       <div class="mobile-header">
-        <div class="mobile-header-image fade" id="mobile-header">
+        <div class="mobile-header-image visible fade" id="mobile-header">
       </div>
       </div>      
     </div>
-    <div class="desktop-header-wrap fade" id="desktop-header">
+    <div class="desktop-header-wrap visible fade" id="desktop-header">
       <div class="desktop-nav">
-        <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+        <div class="logo"><img src="images/logo.svg" alt="room"></div>
         <nav>
           <ul>
             <li><a href="#">Home</a><span></span></li>
@@ -123,7 +123,7 @@
         or anything in between. Product specialists are available to help you create your dream space.</p>
     </div>
     <div class="about-light fade"></div>
-    <div class="black-background hidden fade" id="black-background"></div>    
+    <div class="black-background hidden" id="black-background"></div>    
   </main>
   
 

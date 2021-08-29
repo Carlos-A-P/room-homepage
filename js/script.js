@@ -1,26 +1,47 @@
 const hiddenNav = document.getElementById("hidden-nav")
 const blackBackground = document.getElementById("black-background")
-
-// display mobile nav
-function mobileNav() {
-    hiddenNav.classList.toggle("hidden")
-    blackBackground.classList.toggle("hidden")
-}
-
 const mobileHeader = document.getElementById("mobile-header")
 const desktopHeader = document.getElementById("desktop-header")
 let slideIndex = 1
 showSlides(slideIndex)
+introAnimation()
+
+// display mobile nav
+function mobileNav() {
+    hiddenNav.classList.toggle("hidden")
+    blackBackground.classList.toggle("visible")
+    blackBackground.classList.toggle("hidden")
+}
+
+
+
+function introAnimation(){
+    desktopHeader.style.display = "none"
+    mobileHeader.style.display = "none"
+ setTimeout(()=>{
+    desktopHeader.style.display = "block"
+    mobileHeader.style.display = "block"
+}, 0)   
+}
+
 
 // next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n)
-    mobileHeader.style.display = 'none'
-    desktopHeader.style.display = 'none'
+    slideAnimation()
+}
+
+function slideAnimation() {
+    mobileHeader.classList.add('hidden')
+    mobileHeader.classList.remove('visible')
+    desktopHeader.classList.add('hidden')
+    desktopHeader.classList.remove('visible')
     setTimeout(() => {
-        mobileHeader.style.display = 'block'
-        desktopHeader.style.display = 'block'
-    }, 0)
+        mobileHeader.classList.add('visible')
+        mobileHeader.classList.remove('hidden')
+        desktopHeader.classList.add('visible')
+        desktopHeader.classList.remove('hidden')
+    }, 1500)
 }
 
 
@@ -29,23 +50,24 @@ function showSlides(n) {
     // if slide on first one
     if (n > slides.length){
         slideIndex = 1
-        
     }
     if(n < 1) {
         slideIndex = slides.length
     }
     
-    if(slideIndex === 1) {
-        mobileHeader.style.backgroundImage = "url(../images/mobile-image-hero-1.jpg)"
-        desktopHeader.style.backgroundImage = "url(../images/desktop-image-hero-1.jpg)"
-    } else if (slideIndex === 2) {
-        mobileHeader.style.backgroundImage = "url(../images/mobile-image-hero-2.jpg)"
-        desktopHeader.style.backgroundImage = "url(../images/desktop-image-hero-2.jpg)"
-    } else {
-        mobileHeader.style.backgroundImage = "url(../images/mobile-image-hero-3.jpg)"
-        desktopHeader.style.backgroundImage = "url(../images/desktop-image-hero-3.jpg)"
-    }
-            
+    
+    setTimeout(()=>{
+        if(slideIndex === 1) {
+            mobileHeader.style.backgroundImage = "url(../images/mobile-image-hero-1.jpg)"
+            desktopHeader.style.backgroundImage = "url(../images/desktop-image-hero-1.jpg)"
+        } else if (slideIndex === 2) {
+            mobileHeader.style.backgroundImage = "url(../images/mobile-image-hero-2.jpg)"
+            desktopHeader.style.backgroundImage = "url(../images/desktop-image-hero-2.jpg)"
+        } else {
+            mobileHeader.style.backgroundImage = "url(../images/mobile-image-hero-3.jpg)"
+            desktopHeader.style.backgroundImage = "url(../images/desktop-image-hero-3.jpg)"
+        }        
+    }, 1500)      
 
     for(let i = 0; i<slides.length; i++){
         slides[i].style.display = "none"
