@@ -49,11 +49,20 @@ p.shop-now a {
 	color: black;
 }
 
-.shop-link:hover p.shop-now a {
-	color: var(--Dark-Gray);
+.shop-link {
+	width: 240px;
 }
 
-.shop-link:hover .arrow-icon img {
+p.shop-now a::after {
+	content: url(../images/icon-arrow.svg);
+	margin-left: 30px;
+}
+
+/* .shop-link:hover p.shop-now a {
+	color: var(--Dark-Gray);
+} */
+
+.shop-link:hover {
 	opacity: 0.4;
 }
 
@@ -122,14 +131,14 @@ header {
 	transition: all 0.5s ease-in-out;
 }
 
-.hidden-nav.hidden,
-.hidden-nav.hidden nav {
+.hidden-nav.drop-down,
+.hidden-nav.drop-down nav {
 	visibility: hidden;
 	height: 0;
 }
 
 .black-background {
-	background-color: rgb(0, 0, 0, 0.3);
+	background-color: rgb(0, 0, 0);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -140,11 +149,15 @@ header {
 	width: 100%;
 	z-index: 1;
 	visibility: visible;
-	animation: fade ease 0.5s;
+	opacity: 0.4;
+	/* animation: fade 0.5s; */
+	/* transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out; */
 }
 
 .black-background.hidden {
-	display: none;
+	opacity: 0;
 }
 
 .visible {
@@ -156,6 +169,14 @@ header {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
+.black-background.visible {
+	transition: opacity 0.5s linear;
+}
+
+.black-background.hidden {
+	transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 
 @-webkit-keyframes fade {
@@ -268,10 +289,10 @@ h1 {
 	margin-bottom: 3rem;
 }
 
-.shop-link {
+/* .shop-link {
 	display: flex;
 	gap: 2rem;
-}
+} */
 
 .shop-now {
 	text-transform: uppercase;
