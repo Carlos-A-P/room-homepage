@@ -355,8 +355,8 @@ footer {
 			"desktop-header desktop-header slide slide"
 			"about-dark about about about-light";
 		grid-template-rows: 537px 0fr;
-		grid-template-columns: 424px 5fr 2fr 424px;
-		max-width: 1440px;
+		grid-template-columns: 5fr 5fr 2fr 5fr;
+		max-width: 100vw;
 	}
 
 	.nav-arrows {
@@ -393,7 +393,7 @@ footer {
 	.desktop-nav {
 		display: flex;
 		margin-left: 4rem;
-		margin-top: 3rem;
+		margin-top: 4rem;
 		gap: 44px;
 		align-items: center;
 	}
@@ -476,13 +476,13 @@ footer {
 		grid-area: about-light;
 	}
 
-	.about-dark,
+	/* .about-dark,
 	.about-light {
 		height: 250px;
-	}
+	} */
 
 	footer {
-		max-width: 1440px;
+		max-width: 100vw;
 	}
 
 	.black-background {
@@ -514,8 +514,18 @@ footer {
 	}
 }
 
-@media (min-width: 1000px) and (max-width: 1110px) {
+@media (min-width: 1000px) {
 	.about {
 		padding: 3vw 10% 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.main-wrapper {
+		grid-template-rows: 37vw 0fr;
+	}
+
+	.about {
+		padding: 4vw 10% 0;
 	}
 }
