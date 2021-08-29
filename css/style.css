@@ -24,7 +24,7 @@ body {
 .main-wrapper {
 	background: rgb(255, 255, 255);
 	position: relative;
-	max-width: 500px;
+	max-width: 768px;
 	margin: 0 auto;
 }
 
@@ -307,7 +307,38 @@ footer {
 	color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 500px) {
+	.mobile-header-image {
+		background-position: top 56% left 0;
+	}
+	.about-dark,
+	.about-light {
+		height: 45vw;
+		max-height: 350px;
+	}
+
+	h1 {
+		font-size: 4.5vw;
+	}
+
+	.slide-content {
+		padding: 12% 4%;
+	}
+
+	.about {
+		background-color: white;
+		padding: 10% 5%;
+	}
+
+	footer {
+		max-width: 768px;
+	}
+}
+
+@media (min-width: 660px) {
+	h1 {
+		font-size: 30px;
+	}
 }
 
 @media (max-width: 999px) {
@@ -470,7 +501,7 @@ footer {
 	}
 
 	.desktop-header-wrap {
-		background-size: auto 104%;
+		background-size: auto 100%;
 		background-position: top 0 left 10%;
 	}
 
