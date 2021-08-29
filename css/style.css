@@ -307,13 +307,16 @@ footer {
 	color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 1259px) {
+@media (min-width: 1000px) {
+}
+
+@media (max-width: 999px) {
 	.desktop-header-wrap {
 		display: none !important;
 	}
 }
 
-@media (min-width: 1260px) {
+@media (min-width: 1000px) {
 	.main-wrapper {
 		display: grid;
 		/* height: 100vh; */
@@ -456,9 +459,14 @@ footer {
 	}
 }
 
-@media (min-width: 1260px) and (max-width: 1436px) {
+@media (min-width: 1000px) and (max-width: 1436px) {
 	.main-wrapper {
 		grid-template-columns: 30vw 5fr 2fr 30vw;
+	}
+
+	h1 {
+		font-size: 3vw;
+		margin-bottom: 2vw;
 	}
 
 	.desktop-header-wrap {
@@ -471,6 +479,12 @@ footer {
 	}
 
 	.about {
-		padding: 5vw 38px 0;
+		padding: 5vw 10% 0;
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1110px) {
+	.about {
+		padding: 3vw 10% 0;
 	}
 }
