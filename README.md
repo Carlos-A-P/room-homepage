@@ -101,7 +101,7 @@ This challenge really tested my grid-layout skills and I tried to use the least 
 }
 ```
 
-- The most difficult part was adding animation to my header image. I didn't want to do the same as my slides where I had to make seperate elements for each slide. So instead, I gave my parent div for header a set hieght and was able to give it animations by changing its display and adding a setTimeout()
+- The most difficult part was adding animation to my header image. I didn't want to do the same as my slides where I had to make separate elements for each slide. So instead, I gave my parent div for header a set height and was able to give it animations by changing its display and adding a setTimeout()
 
 ```JavaScript
 // next/previous controls
