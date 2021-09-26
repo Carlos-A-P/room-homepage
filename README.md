@@ -27,11 +27,11 @@ Users should be able to:
 ### End Result
 
 - This is the desktop view
-- 
+
 ![result-desktop](https://user-images.githubusercontent.com/85038929/131232941-92d0e687-6313-4dc7-aff0-2078e5446b97.JPG)
 
 - This is the mobile navigation bar which slides down when active
-- 
+
 ![result-mobile-nav](https://user-images.githubusercontent.com/85038929/131232944-1503c67d-f71d-4bce-bc5e-6b9e7e3b319a.JPG)
 
 ### Built with
